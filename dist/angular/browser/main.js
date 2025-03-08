@@ -52827,12 +52827,12 @@ var MatSnackBarModule = class _MatSnackBarModule {
 // src/app/categories-screen/category/product-list-item/product-list-item.component.ts
 function ProductListItemComponent_mat_icon_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "mat-icon", 12);
+    \u0275\u0275element(0, "mat-icon", 13);
   }
 }
 function ProductListItemComponent_mat_icon_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "mat-icon", 13);
+    \u0275\u0275element(0, "mat-icon", 14);
   }
 }
 var ProductListItemComponent = class _ProductListItemComponent {
@@ -52842,35 +52842,35 @@ var ProductListItemComponent = class _ProductListItemComponent {
     return Array(Math.floor(this.product.rating)).fill(0);
   }
   buy() {
-    let snackBarRef = this._snackBar.open("Product purchased", "Close");
+    this._snackBar.open("Product purchased", "Close");
   }
   static \u0275fac = function ProductListItemComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ProductListItemComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProductListItemComponent, selectors: [["app-product-list-item"]], inputs: { product: "product" }, decls: 17, vars: 7, consts: [[1, "product-list-item"], [1, "product-image", 3, "src"], [1, "product-name"], [1, "likes"], ["fontIcon", "star", 4, "ngFor", "ngForOf"], ["fontIcon", "star_half", 4, "ngIf"], [1, "ready-text"], [1, "old-cost-text"], [1, "cost-and-buy"], [1, "cost-text"], [1, "buy-button", 3, "click"], ["aria-hidden", "false", "aria-label", "Example home icon", "fontIcon", "shopping_cart"], ["fontIcon", "star"], ["fontIcon", "star_half"]], template: function ProductListItemComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProductListItemComponent, selectors: [["app-product-list-item"]], inputs: { product: "product" }, decls: 17, vars: 7, consts: [[1, "product-list-item"], [3, "click"], [1, "product-image", 3, "src"], [1, "product-name"], [1, "likes"], ["fontIcon", "star", 4, "ngFor", "ngForOf"], ["fontIcon", "star_half", 4, "ngIf"], [1, "ready-text"], [1, "old-cost-text"], [1, "cost-and-buy"], [1, "cost-text"], [1, "buy-button"], ["aria-hidden", "false", "aria-label", "Example home icon", "fontIcon", "shopping_cart"], ["fontIcon", "star"], ["fontIcon", "star_half"]], template: function ProductListItemComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "div");
-      \u0275\u0275element(2, "img", 1);
-      \u0275\u0275elementStart(3, "div", 2);
-      \u0275\u0275text(4);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "div", 3);
-      \u0275\u0275template(6, ProductListItemComponent_mat_icon_6_Template, 1, 0, "mat-icon", 4)(7, ProductListItemComponent_mat_icon_7_Template, 1, 0, "mat-icon", 5);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(8, "div", 6);
-      \u0275\u0275text(9, "Ready for shipment");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(10, "div", 7);
-      \u0275\u0275text(11);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(12, "div", 8)(13, "div", 9);
-      \u0275\u0275text(14);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(15, "div", 10);
-      \u0275\u0275listener("click", function ProductListItemComponent_Template_div_click_15_listener() {
+      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1);
+      \u0275\u0275listener("click", function ProductListItemComponent_Template_div_click_1_listener() {
         return ctx.buy();
       });
-      \u0275\u0275element(16, "mat-icon", 11);
+      \u0275\u0275element(2, "img", 2);
+      \u0275\u0275elementStart(3, "div", 3);
+      \u0275\u0275text(4);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(5, "div", 4);
+      \u0275\u0275template(6, ProductListItemComponent_mat_icon_6_Template, 1, 0, "mat-icon", 5)(7, ProductListItemComponent_mat_icon_7_Template, 1, 0, "mat-icon", 6);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(8, "div", 7);
+      \u0275\u0275text(9, "Ready for shipment");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(10, "div", 8);
+      \u0275\u0275text(11);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(12, "div", 9)(13, "div", 10);
+      \u0275\u0275text(14);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "div", 11);
+      \u0275\u0275element(16, "mat-icon", 12);
       \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
@@ -64777,25 +64777,34 @@ var routes = [
   {
     path: "",
     pathMatch: "full",
-    redirectTo: "/category"
+    redirectTo: "/TestFrontAngular/category"
   },
   {
-    path: "category",
-    component: CategoriesComponent
-  },
-  {
-    path: "category/:categoryId",
-    component: CategoryComponent
-  },
-  {
-    path: "product/:productId",
-    component: ProductScreenComponent
+    path: "TestFrontAngular",
+    children: [
+      {
+        path: "category",
+        component: CategoriesComponent
+      },
+      {
+        path: "category/:categoryId",
+        component: CategoryComponent
+      },
+      {
+        path: "product/:productId",
+        component: ProductScreenComponent
+      }
+    ]
   }
 ];
 
 // src/app/app.config.ts
 var appConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, withComponentInputBinding())]
+  providers: [
+    // Location, {provide: LocationStrategy, useClass: HashLocationStrategy},
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes, withComponentInputBinding())
+  ]
 };
 
 // node_modules/@angular/material/fesm2022/toolbar.mjs
