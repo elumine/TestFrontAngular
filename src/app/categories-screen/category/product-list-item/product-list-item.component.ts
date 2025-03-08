@@ -7,7 +7,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-list-item',
-  imports: [RouterLink, MatIconModule, NgFor, NgIf],
+  imports: [MatIconModule, NgFor, NgIf],
   templateUrl: './product-list-item.component.html',
   styleUrl: './product-list-item.component.scss'
 })
@@ -20,6 +20,6 @@ export class ProductListItemComponent {
   }
 
   buy() {
-    let snackBarRef = this._snackBar.open('Product purchased', 'Close');
+    this._snackBar.open('Product purchased', 'Close');
   }
 }

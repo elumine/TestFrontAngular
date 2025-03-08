@@ -1,5 +1,5 @@
 <div class="product-list-item">
-    <div>
+    <div (click)="buy()">
         <img class="product-image" src="https://picsum.photos/id/{{product.imageId}}/200/200" />
         <div class="product-name">{{ product.name }}</div>
         <div class="likes">
@@ -10,7 +10,7 @@
         <div class="old-cost-text">{{ product.oldPrice }}$</div>
         <div class="cost-and-buy">
             <div class="cost-text">{{ product.price }}$</div>
-            <div class="buy-button" (click)="buy()">
+            <div class="buy-button">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
             </div>
         </div>
