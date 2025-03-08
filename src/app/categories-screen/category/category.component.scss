@@ -1,0 +1,22 @@
+.category {
+    padding: 50px;
+    .navigation {
+        display: flex;
+        align-content: flex-start;
+        margin: 0 0 10px 10px;
+        .back-text {
+
+        }
+        .divider {
+            margin: 0 10px;
+        }
+        .name {
+
+        }
+    }
+    .products-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+
+.product-list-item {
+    margin: 10px 10px 20px 10px;
+    cursor: pointer;
+
+    .product-image {
+        box-shadow: #000 0px 0px 5px 0px;
+    }
+
+    .product-name {
+        margin-top: 10px;
+        font-size: 1em;
+        color: #333;
+    }
+    .likes {
+        mat-icon {
+            color: #fc0
+        }
+    }
+    .ready-text {
+        color: #0a3;
+        font-size: 0.75em;
+        margin-top: 10px;
+    }
+    .old-cost-text {
+        color: #c01;
+        margin-top: 10px;
+        text-decoration: line-through;
+    }
+    .cost-and-buy {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+        .cost-text {
+            color: #0a3;
+            font-size: 1.5em;
+        }
+        .buy-button {
+            mat-icon {
+                color: #00a046;
+            }
+        }
+    }
+}

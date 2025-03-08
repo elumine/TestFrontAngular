@@ -1,0 +1,19 @@
+<div class="category">
+    <div *ngIf="category">
+        <div class="navigation">
+            <a routerLink="/category" class="back-text">Categories</a>
+            <div class="divider">/</div>
+            <div class="name">{{ category.name }}</div>
+        </div>
+        <div class="products-list">
+            <app-product-list-item *ngFor="let product of productsList" [product]="product"></app-product-list-item>
+        </div>
+    </div>
+    <mat-paginator [length]="pagination.count"
+        (page)="updatePagination($event)"
+        [pageSize]="pagination.pageSize"
+        [pageSizeOptions]="[5, 10, 25]"
+        [pageIndex]="pagination.page"
+        aria-label="Select page">
+    </mat-paginator>
+</div>

@@ -1,0 +1,19 @@
+.category-button {
+    margin: 30px 60px;
+    cursor: pointer;
+
+    img {
+        box-shadow: #000 0px 0px 5px 0px;
+    }
+
+    .text {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+        .category-name {
+            font-size: 1.5em;
+            color: #333;
+        }
+    }
+}
