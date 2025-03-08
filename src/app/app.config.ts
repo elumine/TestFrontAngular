@@ -5,7 +5,7 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    Location, {provide: LocationStrategy, useClass: HashLocationStrategy},
+    // Location, {provide: LocationStrategy, useClass: HashLocationStrategy},
     provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, withComponentInputBinding())
   ]
 };

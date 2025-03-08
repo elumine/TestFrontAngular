@@ -7,15 +7,21 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/category'
-    }, {
-        path: 'category',
-        component: CategoriesComponent,
-    }, {
-        path: 'category/:categoryId',
-        component: CategoryComponent
-    }, {
-        path: 'product/:productId',
-        component: ProductScreenComponent
+        redirectTo: '/TestFrontAngular/category'
+    },
+    {
+        path: 'TestFrontAngular',
+        children: [
+            {
+                path: 'category',
+                component: CategoriesComponent,
+            }, {
+                path: 'category/:categoryId',
+                component: CategoryComponent
+            }, {
+                path: 'product/:productId',
+                component: ProductScreenComponent
+            }
+        ]
     }
 ];
